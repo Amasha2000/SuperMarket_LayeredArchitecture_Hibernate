@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewReportsFormController">
+   <children>
+      <ImageView fitHeight="1312.0" fitWidth="1525.0" layoutY="-3.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/image6.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="392.0" onAction="#viewMonthlyIncomeReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #14a14a; -fx-background-radius: 20;" text="Monthly Income Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="706.0" onAction="#viewAnnuallyIncomeReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #076e15; -fx-background-radius: 20;" text="Annually Income Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="78.0" onAction="#viewDailyIncomeReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #52af3f; -fx-background-radius: 20;" text="Daily Income Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="782.0" layoutY="78.0" onAction="#viewCustomerWiseIncomeReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #2ec589; -fx-background-radius: 20;" text="Customer Wise Income Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="782.0" layoutY="392.0" onAction="#viewMostMovableItemsReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #68d049; -fx-background-radius: 20;" text="Most Movable Item List Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="782.0" layoutY="706.0" onAction="#viewLeastMovableItemsReportOnAction" prefHeight="280.0" prefWidth="710.0" style="-fx-background-color: #24a128; -fx-background-radius: 20;" text="Least Movable Item List Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+</AnchorPane>

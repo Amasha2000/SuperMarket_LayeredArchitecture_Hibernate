@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pageContext" prefHeight="1080.0" prefWidth="1525.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemFormController">
+   <children>
+      <TableView fx:id="tblItemList" cache="true" layoutX="31.0" layoutY="464.0" prefHeight="577.0" prefWidth="1467.0" style="-fx-background-color: Transparent;" stylesheets="@../asset/style/tableStyle.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="637.66672706604" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="828.3333129882812" text="Description" />
+            <TableColumn fx:id="colPackSize" prefWidth="637.66672706604" text="Pack Size" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="828.3333129882812" text="Quantity on Hand" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="244.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="243.0" text="Discount" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="775.0" layoutY="47.0" onAction="#addItemOnAction" prefHeight="60.0" prefWidth="148.0" ripplerFill="#479045" style="-fx-background-color: #3E8D16;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1329.0" layoutY="47.0" onAction="#updateItemOnAction" prefHeight="60.0" prefWidth="148.0" ripplerFill="#479045" style="-fx-background-color: #3E8D16;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1329.0" layoutY="279.0" onAction="#deleteItemOnAction" prefHeight="60.0" prefWidth="148.0" ripplerFill="#479045" style="-fx-background-color: #3E8D16;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="54.0" layoutY="54.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="116.0" style="-fx-background-color: #ffffff;" text="Search here..." textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="itemSearchBar" layoutX="14.0" layoutY="9.0" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="243.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="156.0" style="-fx-background-color: #ffffff;" text="Quantity on Hand" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQtyOnHand1" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="171.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: #ffffff;" text="Pack Size" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPackSize1" layoutX="22.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="277.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="93.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" text="Description" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDescription1" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="23.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" text="Item Code" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtItemCode1" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="243.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="156.0" style="-fx-background-color: #ffffff;" text="Quantity on Hand" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQtyOnHand2" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="315.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="90.0" style="-fx-background-color: #ffffff;" text="Unit Price" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUnitPrice2" layoutX="27.0" layoutY="9.0" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="277.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="388.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: #ffffff;" text="Discount" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDiscount2" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="315.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="90.0" style="-fx-background-color: #ffffff;" text="Unit Price" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUnitPrice1" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="388.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: #ffffff;" text="Discount" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDiscount1" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyRelased1" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="17.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" text="Item Code" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtItemCode2" layoutX="18.0" layoutY="9.0" onAction="#selectItemOnAction" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="277.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="93.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" text="Description" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDescription2" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="968.0" layoutY="171.0" prefHeight="60.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #273c75; -fx-border-radius: 8;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: #ffffff;" text="Pack Size" textFill="#2131a8">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPackSize2" layoutX="14.0" layoutY="9.0" onKeyReleased="#keyReleased2" prefHeight="42.0" prefWidth="285.0" style="-fx-background-color: white;" unFocusColor="#c5c0c0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="43.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/image8.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
