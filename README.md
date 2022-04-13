@@ -47,4 +47,3 @@ Most Movable Item List Report<hr>
 ![Screenshot (65)](https://user-images.githubusercontent.com/90234105/153432581-06fa3643-bfec-4c2b-85e9-25c17d8ea974.png)
 Least Movable Item List Report<hr>
 ![Screenshot (67)](https://user-images.githubusercontent.com/90234105/153432756-a3398b8b-3ade-43cc-8e74-2d2d2a84e8bd.png)
-
